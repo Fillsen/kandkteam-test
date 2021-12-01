@@ -1,4 +1,4 @@
-import styles from './app.module.scss'
+import styles from './App.module.scss';
 
 export const App = () => {
     return (
@@ -6,4 +6,4 @@ export const App = () => {
             test branch2
         </div>
     );
-}
+};
