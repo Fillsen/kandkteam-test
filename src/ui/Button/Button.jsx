@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import styles from './Button.module.scss';
 
-export const Button = ({children, disabled, variant, ...props}) => {
-    
+export const Button = ({variant, disabled, children, ...props}) => {
+
     let classNames = cn(
         {[styles[[`${variant}`]]]: variant !== undefined}
     );

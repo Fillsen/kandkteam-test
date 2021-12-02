@@ -1,7 +1,7 @@
 // All resolutions
 .header {
   padding: 1rem;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #000;
 }
 
 // Mobile
@@ -28,6 +28,11 @@
   &__name, &__avatar {
     display: flex;
     align-items: center;
+  }
+
+  &__avatar {
+    width: 25px;
+    height: 25px;
   }
 }
 
