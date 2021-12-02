@@ -40,14 +40,6 @@ input::-ms-clear {
   display: none;
 }
 
-button {
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: not-allowed;
-}
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;

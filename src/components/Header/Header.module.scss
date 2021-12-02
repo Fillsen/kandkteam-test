@@ -1,13 +1,14 @@
+// All resolutions
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem;
   border-bottom: 1px solid;
 }
 
-.button {
-  color: #000 !important;
+// Mobile
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .switch {
@@ -30,6 +31,7 @@
   }
 }
 
+// Desktop
 @media screen and (min-width: 1024px) {
   .header {
     grid-column: 1/-1;
