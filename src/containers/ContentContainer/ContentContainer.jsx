@@ -1,7 +1,7 @@
+import { Content } from 'components';
+
 export const ContentContainer = () => {
     return (
-        <div>
-            ContentContainer
-        </div>
+        <Content/>
     );
 };

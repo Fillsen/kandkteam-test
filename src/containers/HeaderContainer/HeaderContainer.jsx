@@ -1,7 +1,7 @@
+import { Header } from 'components';
+
 export const HeaderContainer = () => {
     return (
-        <div>
-            HeaderContainer
-        </div>
+        <Header/>
     );
 };

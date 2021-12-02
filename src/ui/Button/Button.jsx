@@ -1,6 +1,9 @@
-export const Button = ({children, ...props}) => {
+import cn from 'classnames';
+import styles from './Button.module.scss';
+
+export const Button = ({children, className, ...props}) => {
     return (
-        <button {...props}>
+        <button className={cn(styles.btn__primary, className)} {...props}>
             {children}
         </button>
     );

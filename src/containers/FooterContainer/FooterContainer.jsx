@@ -1,7 +1,7 @@
+import { Footer } from 'components';
+
 export const FooterContainer = () => {
     return (
-        <div>
-            FooterContainer
-        </div>
+        <Footer/>
     );
 };

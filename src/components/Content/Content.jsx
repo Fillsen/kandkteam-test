@@ -1,7 +1,7 @@
 export const Content = () => {
     return (
-        <div>
-            Content
-        </div>
+        <section>
+            Content Component
+        </section>
     );
 };

@@ -1,7 +1,7 @@
+import { Profile } from 'components';
+
 export const ProfileContainer = () => {
     return (
-        <div>
-            ProfileContainer
-        </div>
+        <Profile/>
     );
 };

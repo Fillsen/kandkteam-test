@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid;
+}
+
+.button {
+  color: #000 !important;
+}
+
+.switch {
+  margin-left: 1rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.action {
+  margin-right: 1rem;
+}
+
+.profile {
+  &__name, &__avatar {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    grid-column: 1/-1;
+  }
+}
