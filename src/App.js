@@ -1,14 +1,17 @@
-import 'App.scss';
-import 'ui/Switch/Switch.scss';
-import { ContentContainer, FooterContainer, HeaderContainer } from 'containers';
+import { MainPage, AuthPage, NotfoundPage } from 'pages';
+import { Routes, Route } from 'react-router-dom';
+import { AppLayout } from 'layout';
 
 export const App = () => {
-
     return (
-        <div className="wrapper">
-            <HeaderContainer/>
-            <ContentContainer/>
-            <FooterContainer/>
-        </div>
+        <>
+            <Routes>
+                <Route path="/" element={<AppLayout/>}>
+                    <Route index element={<MainPage/>}/>
+                    <Route path="signin" element={<AuthPage/>}/>
+                    <Route path="*" element={<NotfoundPage/>}/>
+                </Route>
+            </Routes>
+        </>
     );
 };

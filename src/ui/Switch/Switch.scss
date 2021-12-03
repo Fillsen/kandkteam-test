@@ -1,11 +1,4 @@
-// Light theme
-$bg-theme-light: #fff;
-$color-theme-light: #222;
-
-// Dark theme
-$bg-theme-dark: #222;
-$color-theme-dark: #fff;
-
+@import "src/styles/colors";
 
 .input-switcher {
   height: 0;
@@ -22,6 +15,7 @@ $color-theme-dark: #fff;
   float: right;
   border-radius: 100px;
   position: relative;
+  transition: all 0.4s ease-in-out;
 }
 
 .label-switcher:after {
@@ -37,7 +31,7 @@ $color-theme-dark: #fff;
 }
 
 .input-switcher:checked + .label-switcher {
-  background: #0077FF;
+  background: $light_theme_primary_button_background;
 }
 
 .input-switcher:checked + .label-switcher:after {

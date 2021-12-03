@@ -1,3 +1,5 @@
+@import 'src/styles/colors';
+
 .content {
   display: grid;
   grid-gap: 20px;
@@ -12,8 +14,8 @@
   }
 
   &__card:hover {
-    background-color: #353D4B;
-    color: #fff;
+    background-color: $light_theme_primary_background;
+    color: $light_theme_secondary_text-color;
   }
 }
 
