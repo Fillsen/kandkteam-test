@@ -1,0 +1,45 @@
+// All resolutions
+.header {
+  padding: 1rem;
+  background-color: #353D4B;
+  color: #fff;
+}
+
+// Mobile
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__switch {
+    margin-left: 1rem;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__action {
+    margin-right: 1rem;
+  }
+}
+
+.profile {
+  &__name, &__avatar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+  .header {
+    grid-column: 1/-1;
+  }
+}
