@@ -1,13 +1,25 @@
-import styles from './Header.module.scss';
+import './Header.scss';
+import icon from 'assets/resource/avatar.svg';
 import { Button, Switch } from 'ui';
-import { User } from './User';
 
-export const Header = () => {
+export const Header = (
+    {
+        avatar = icon,
+        username = 'Username',
+    }
+) => {
     return (
-        <header className={styles.header}>
-            <Switch className={styles.switch}/>
-            <User className={styles.profile}/>
-            <Button variant="primary">Профиль</Button>
+        <header className="header">
+            <div className="header__switch">
+                <Switch/>
+            </div>
+            <div className="header__profile profile">
+                <img className="profile__avatar" src={avatar} alt=""/>
+                <div className="profile__name">{username}</div>
+            </div>
+            <div className="header__action">
+                <Button variant="primary">Sign In</Button>
+            </div>
         </header>
     );
 };

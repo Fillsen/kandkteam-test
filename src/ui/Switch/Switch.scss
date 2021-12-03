@@ -1,0 +1,50 @@
+// Light theme
+$bg-theme-light: #fff;
+$color-theme-light: #222;
+
+// Dark theme
+$bg-theme-dark: #222;
+$color-theme-dark: #fff;
+
+
+.input-switcher {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.label-switcher {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+.label-switcher:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: all 0.4s ease-in-out;
+}
+
+.input-switcher:checked + .label-switcher {
+  background: #0077FF;
+}
+
+.input-switcher:checked + .label-switcher:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.label-switcher:active:after {
+  width: 45px;
+}

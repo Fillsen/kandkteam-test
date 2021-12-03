@@ -1,7 +1,8 @@
 // All resolutions
 .header {
   padding: 1rem;
-  border-bottom: 1px solid #000;
+  background-color: #353D4B;
+  color: #fff;
 }
 
 // Mobile
@@ -9,19 +10,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.switch {
-  margin-left: 1rem;
-}
+  &__switch {
+    margin-left: 1rem;
+  }
 
-.profile {
-  display: flex;
-  flex-direction: row;
-}
+  &__profile {
+    display: flex;
+    flex-direction: row;
+  }
 
-.action {
-  margin-right: 1rem;
+  &__action {
+    margin-right: 1rem;
+  }
 }
 
 .profile {

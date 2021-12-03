@@ -1,8 +1,18 @@
-export const Switch = ({className}) => {
+import './Switch.scss';
+
+export const Switch = ({handleThemeSwitch, isActive}) => {
     return (
-        <label className={className}>
-            <input type="checkbox"/>
-            <span/>
-        </label>
+        <>
+            <input
+                className="input-switcher"
+                type="checkbox"
+                id="switch"
+            />
+            <label
+                onClick={handleThemeSwitch}
+                className="label-switcher"
+                htmlFor="switch"
+            />
+        </>
     );
 };

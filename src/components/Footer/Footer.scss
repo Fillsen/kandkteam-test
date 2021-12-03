@@ -1,0 +1,19 @@
+.footer {
+  border-top: 1px solid;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #353D4B;
+  color: #fff;
+
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    grid-column: 1/-1;
+  }
+}
