@@ -1,0 +1,1 @@
+export { RequireAuthHoc } from './RequireAuthHOC';

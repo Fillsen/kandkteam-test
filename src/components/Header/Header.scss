@@ -11,8 +11,8 @@
   justify-content: space-between;
   align-items: center;
 
-  &__switch {
-    margin-left: 1rem;
+  &__logo, &__logo__active {
+    color: inherit !important;
   }
 
   &__profile {
@@ -21,19 +21,22 @@
   }
 
   &__action {
-    margin-right: 1rem;
   }
 }
 
 .profile {
+  color: inherit !important;
+
   &__name, &__avatar {
     display: flex;
     align-items: center;
   }
 
   &__avatar {
+    background-size: cover;
     width: 25px;
     height: 25px;
+    margin: 0 5px;
   }
 }
 
@@ -41,5 +44,11 @@
 @media screen and (min-width: 1024px) {
   .header {
     grid-column: 1/-1;
+
+    &__logo {
+    }
+
+    &__action {
+    }
   }
 }

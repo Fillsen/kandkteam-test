@@ -1,6 +1,6 @@
 import './Switch.scss';
 
-export const Switch = ({handleThemeSwitch, isActive}) => {
+export const Switch = ({handleThemeSwitch}) => {
     return (
         <>
             <input

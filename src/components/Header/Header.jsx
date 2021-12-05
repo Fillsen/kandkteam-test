@@ -1,24 +1,46 @@
 import './Header.scss';
 import icon from 'assets/resource/avatar.svg';
-import { Button, Switch } from 'ui';
+import { Button } from 'ui';
+import { NavLink, Link } from 'react-router-dom';
 
 export const Header = (
     {
         avatar = icon,
-        username = 'Username',
+        userName,
+        setActiveClassName,
+        handleDelToken
     }
 ) => {
     return (
         <header className="header">
-            <div className="header__switch">
-                <Switch/>
-            </div>
+
+            <NavLink to="/" className={setActiveClassName}>
+                Simple App
+            </NavLink>
+
             <div className="header__profile profile">
-                <img className="profile__avatar" src={avatar} alt=""/>
-                <div className="profile__name">{username}</div>
+                {!userName ? null : (
+                    <Link to="profile" className="header__profile profile">
+                        <img className="profile__avatar" src={avatar} alt=""/>
+                        <div className="profile__name">{userName}</div>
+                    </Link>
+                )}
             </div>
             <div className="header__action">
-                <Button variant="primary">Sign In</Button>
+                {userName ? (
+                    <Link to="/">
+                        <Button
+                            variant="secondary"
+                            onClick={handleDelToken}
+                        >
+                            Exit
+                        </Button>
+                    </Link>
+                ) : (
+                    <Link className="header__action" to="signin">
+                        <Button variant="primary">Sign In</Button>
+                    </Link>
+                )}
             </div>
         </header>
     );

@@ -1,6 +1,6 @@
 export const ProfilePage = () => {
     return (
-        <div>
+        <div className="container">
             Profile Page
         </div>
     );
