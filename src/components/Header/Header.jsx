@@ -6,22 +6,42 @@ import { NavLink, Link } from 'react-router-dom';
 export const Header = (
     {
         avatar = icon,
-        username = 'Username'
+        userName,
+        setActiveClassName,
+        handleDelToken
     }
 ) => {
-    const setActiveClassName = ({isActive}) => isActive ? 'header__logo__active' : 'header__logo';
     return (
         <header className="header">
+
             <NavLink to="/" className={setActiveClassName}>
                 Simple App
             </NavLink>
+
             <div className="header__profile profile">
-                <img className="profile__avatar" src={avatar} alt=""/>
-                <div className="profile__name">{username}</div>
+                {!userName ? null : (
+                    <Link to="profile" className="header__profile profile">
+                        <img className="profile__avatar" src={avatar} alt=""/>
+                        <div className="profile__name">{userName}</div>
+                    </Link>
+                )}
             </div>
-            <Link className="header__action" to="signin">
-                <Button variant="primary">Sign In</Button>
-            </Link>
+            <div className="header__action">
+                {userName ? (
+                    <Link to="/">
+                        <Button
+                            variant="secondary"
+                            onClick={handleDelToken}
+                        >
+                            Exit
+                        </Button>
+                    </Link>
+                ) : (
+                    <Link className="header__action" to="signin">
+                        <Button variant="primary">Sign In</Button>
+                    </Link>
+                )}
+            </div>
         </header>
     );
 };

@@ -25,6 +25,8 @@
 }
 
 .profile {
+  color: inherit !important;
+
   &__name, &__avatar {
     display: flex;
     align-items: center;

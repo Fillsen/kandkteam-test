@@ -1,15 +1,8 @@
-// All resolutions
-//.wrapper {
-//  min-height: 100vh;
-//}
-
-// Mobile
 .wrapper {
   display: flex;
   flex-direction: column;
 }
 
-// Desktop
 @media screen and (min-width: 1024px) {
   .wrapper {
     display: grid;

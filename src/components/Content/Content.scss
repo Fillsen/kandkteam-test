@@ -4,6 +4,7 @@
   display: grid;
   grid-gap: 20px;
   padding: 2rem;
+  min-height: 100vh;
 
   &__card {
     cursor: pointer;
@@ -33,6 +34,7 @@
     grid-template-columns: 33.333% 33.333% 33.333%;
     justify-content: center;
     padding: 3rem;
+    min-height: unset;
   }
 
   .loading {
