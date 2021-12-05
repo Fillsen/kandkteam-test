@@ -8,7 +8,7 @@ export const Header = (
         avatar = icon,
         userName,
         setActiveClassName,
-        handleDelToken
+        handleDelToken,
     }
 ) => {
     return (
