@@ -1,7 +1,5 @@
+import { ProfileContainer } from 'containers';
+
 export const ProfilePage = () => {
-    return (
-        <div className="container">
-            Profile Page
-        </div>
-    );
+    return <ProfileContainer/>;
 };

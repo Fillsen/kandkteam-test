@@ -12,6 +12,7 @@ export const HeaderContainer = () => {
         localStorage.removeItem('username');
         navigate('/');
     };
+
     const setActiveClassName = ({isActive}) => {
         return isActive ? 'header__logo__active' : 'header__logo';
     };
@@ -25,6 +26,7 @@ export const HeaderContainer = () => {
             setActiveClassName={setActiveClassName}
             handleDelToken={handleDelToken}
             userName={userName}
+            isToken={isToken}
         />
     );
 };
