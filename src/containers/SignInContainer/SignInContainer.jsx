@@ -17,7 +17,7 @@ export const SignInContainer = () => {
             localStorage.setItem('isToken', JSON.stringify(true));
             localStorage.setItem('username', userName);
             console.log(`Your password: ${userPassword}`);
-            navigate(fromPage || '/');
+            navigate(fromPage);
         }
     };
 
